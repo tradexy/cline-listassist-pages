@@ -3,18 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <title>List Assist – Shared List</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 20px; }
-    h1 { font-size: 24px; margin-bottom: 10px; }
-    ul { list-style: none; padding: 0; }
-    li { margin-bottom: 8px; }
-    a { color: #0073e6; text-decoration: none; }
-    img { max-width: 100px; margin-right: 8px; vertical-align: middle; }
-  </style>
+  <!-- Link to core styles (assuming core.css is copied to docs folder) -->
+  <link rel="stylesheet" type="text/css" href="core.css"> 
+  <!-- Optional: Add favicon -->
+  <link rel="icon" type="image/png" href="ebayGoodLogo-16x16.png"> 
 </head>
 <body>
-  <h1 id="title">Shared List</h1>
-  <ul id="list"></ul>
+  <h1 id="title">Shared List</h1> 
+  
+  <!-- Use table structure similar to shopping_list.html -->
+  <table>
+    <thead>
+      <tr>
+        <!-- Columns matching shopping_list.html (excluding Done/Actions) -->
+        <th>Item</th>
+        <th>Link</th>
+      </tr>
+    </thead>
+    <tbody id="sharedListBody">
+        <!-- Rows will be populated by share.js -->
+    </tbody>
+  </table>
 
   <script src="share.js"></script>
 </body>

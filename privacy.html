@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - List Assist Extension</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; color: #333; }
+        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+        h1 { color: #2c3e50; }
+        h2 { color: #34495e; }
+        p, ul { margin-bottom: 1em; }
+        ul { padding-left: 20px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Privacy Policy for List Assist Chrome Extension</h1>
+        <p><em>Last Updated: May 9, 2025</em></p>
+
+        <h2>Introduction</h2>
+        <p>This Privacy Policy describes how the List Assist Chrome Extension ("Extension," "we," "us," or "our") handles your information when you use our Extension. By using the Extension, you agree to the collection and use of information in accordance with this policy.</p>
+
+        <h2>Information We Collect and How We Use It</h2>
+        <p>List Assist is designed to operate primarily on your local device.</p>
+        <ul>
+            <li><strong>List Data:</strong> The Extension allows you to create and manage shopping lists, which include item names and URLs. This data is stored locally on your computer using Chrome's `chrome.storage.local` API. We do not have access to this data, nor is it transmitted to any external server by the Extension.</li>
+            <li><strong>User Preferences:</strong> Settings such as your theme preferences (background color, text color, font family), dark mode preference, and advanced sharing preference are also stored locally using `chrome.storage.local`.</li>
+            <li><strong>Imported Data:</strong> When you use the feature to import an item from a webpage, the Extension accesses the current tab's title and URL to populate the new list item. This information is then stored locally as part of your list data.</li>
+        </ul>
+
+        <h2>Data Sharing</h2>
+        <p>The Extension itself does not share your personal data with any third parties or external servers.</p>
+        <p>The "Share List" feature allows you to generate a unique URL that contains the data of the list you choose to share. This URL is generated entirely on your device. When you share this URL with others, they will be able to view the content of that specific list. The privacy of this shared link is your responsibility.</p>
+        
+        <h2>Permissions Used by the Extension</h2>
+        <p>List Assist requires the following permissions to function:</p>
+        <ul>
+            <li><strong>`storage`</strong>: To save your lists and preferences locally on your device.</li>
+            <li><strong>`tabs`</strong>: To access the title and URL of the current active tab when you use the "import item" feature.</li>
+            <li><strong>`notifications`</strong>: To provide you with alerts, for example, when an item cannot be fully parsed during import.</li>
+            <li><strong>`declarativeNetRequest`</strong>: To modify network requests for the purpose of adding an affiliate tag to eBay URLs, as per the extension's functionality. This is done locally within your browser.</li>
+        </ul>
+
+        <h2>Data Security</h2>
+        <p>Since all your list data and preferences are stored locally on your computer through `chrome.storage.local`, the security of this data is tied to the security of your computer and your Chrome browser profile.</p>
+
+        <h2>Changes to This Privacy Policy</h2>
+        <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date. You are advised to review this Privacy Policy periodically for any changes.</p>
+
+        <h2>Contact Us</h2>
+        <p>If you have any questions about this Privacy Policy, please contact us at: indexrandom@gmail.com</p>
+    </div>
+</body>
+</html>

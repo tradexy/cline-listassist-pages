@@ -281,8 +281,8 @@ body {
 
 .content-box {
     background-color: var(--user-bg-color, #ffffff);
-    padding: 10px;
-    margin: 8px 0;
+    padding: 5px 10px;
+    margin: 5px 0;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }

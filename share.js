@@ -112,13 +112,18 @@ window.addEventListener('DOMContentLoaded', () => {
     if (payload.subtitle?.text || payload.subtitle?.imageUrl) {
         subtitleBox.style.display = 'block';
         subtitleContent.textContent = payload.subtitle.text || '';
-        subtitleBox.className = `content-box subtitle-box ${payload.subtitle.alignment || 'left'}`;
+        subtitleContent.style.fontSize = '1.2em';
+        subtitleContent.style.lineHeight = '1.5';
+        subtitleBox.className = `subtitle-box ${payload.subtitle.alignment || 'left'}`;
         
         if (payload.subtitle.imageUrl) {
             subtitleImage.src = payload.subtitle.imageUrl;
             subtitleImage.style.display = 'block';
             subtitleImage.style.marginLeft = payload.subtitle.imageAlignment === 'left' ? '0' : 'auto';
             subtitleImage.style.marginRight = payload.subtitle.imageAlignment === 'right' ? '0' : 'auto';
+            subtitleImage.onerror = () => {
+                subtitleImage.style.display = 'none';
+            };
         } else {
             subtitleImage.style.display = 'none';
         }

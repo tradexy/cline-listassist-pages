@@ -32,11 +32,20 @@ function maybeInjectAffiliateTag(url) {
 
 // Apply theme settings using CSS Variables
 function applyThemeSettings(theme, defaults) {
-    const currentTheme = { ...defaults, ...theme }; // Merge saved theme with defaults
+    const currentTheme = { 
+        mainBg: '#f5f5f5',
+        boxBg: '#ffffff', 
+        text: '#333333',
+        font: 'Arial, sans-serif',
+        ...defaults, 
+        ...theme 
+    };
     const root = document.documentElement;
-    root.style.setProperty('--user-bg-color', currentTheme.bg);
+    root.style.setProperty('--user-main-bg-color', currentTheme.mainBg);
+    root.style.setProperty('--user-bg-color', currentTheme.boxBg);
     root.style.setProperty('--user-text-color', currentTheme.text);
     root.style.setProperty('--user-font-family', currentTheme.font);
+    document.body.style.backgroundColor = currentTheme.mainBg;
 }
 
 // Apply Dark Mode class
@@ -52,8 +61,9 @@ function applyDarkMode(isDark) {
 window.addEventListener('DOMContentLoaded', () => {
     const titleEl = document.getElementById('title');
     const listBodyEl = document.getElementById('sharedListBody'); // Target tbody now
-    const defaultTheme = { // Define defaults for the shared page
-        bg: '#ffffff',
+    const defaultTheme = {
+        mainBg: '#f5f5f5',
+        boxBg: '#ffffff',
         text: '#333333',
         font: 'Arial, sans-serif'
     };

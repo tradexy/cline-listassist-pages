@@ -9,24 +9,25 @@
   <link rel="icon" type="image/png" href="ebayGoodLogo-16x16.png"> 
 </head>
 <body>
-  <div id="share-container">
-    <h1 id="title">Shared List</h1> 
-    
-    <!-- Use table structure similar to shopping_list.html -->
-    <table class="share-table" id="share-table">
-    <thead>
-      <tr>
-        <!-- Columns matching shopping_list.html (excluding Done/Actions) -->
-        <th>Item</th>
-        <th>Link</th>
-      </tr>
-    </thead>
-    <tbody id="sharedListBody">
-        <!-- Rows will be populated by share.js -->
-    </tbody>
-  </table>
-
+<div id="main-container">
+  <div class="content-box title-box">
+    <h1 id="title">Shared List</h1>
   </div>
+
+  <div class="content-box table-box">
+    <table id="share-table">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Link</th>
+        </tr>
+      </thead>
+      <tbody id="sharedListBody">
+        <!-- Rows will be populated by share.js -->
+      </tbody>
+    </table>
+  </div>
+</div>
   <script src="share.js"></script>
   <style>
     #share-table th {

@@ -100,25 +100,8 @@ window.addEventListener('DOMContentLoaded', () => {
     applyDarkMode(isDarkMode);
     applyThemeSettings(theme, defaultTheme); // Apply theme from payload
 
-    // 3) Set title, banner and subtitle
+    // 3) Set title 
     titleEl.textContent = payload.name || 'Shared List';
-    
-    // Handle banner image if provided
-    if (payload.bannerUrl) {
-      const bannerImg = document.getElementById('sharedBannerImage');
-      bannerImg.src = payload.bannerUrl;
-      bannerImg.style.display = 'block';
-      document.getElementById('sharedBannerContainer').style.textAlign = 
-        payload.bannerPosition || 'center';
-    }
-
-    // Handle subtitle if provided
-    if (payload.subtitle) {
-      const subtitleEl = document.getElementById('sharedListSubtitle');
-      subtitleEl.textContent = payload.subtitle;
-      subtitleEl.style.display = 'block';
-      subtitleEl.style.textAlign = payload.subtitlePosition || 'center';
-    }
     document.title = `List Assist – Shared: ${payload.name || 'List'}`; // Update page title too
 
     // 4) Render items into the table

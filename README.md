@@ -19,3 +19,4 @@ The working extension files are located in `/listassist/docs` folder. This is th
 Folder used for Load Unpacked testing
 `/listassist/cline-listassist/live-extension`
 See `/listassist/cline-listassist/README.md`
+.

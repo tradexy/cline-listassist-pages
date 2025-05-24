@@ -100,9 +100,31 @@ window.addEventListener('DOMContentLoaded', () => {
     applyDarkMode(isDarkMode);
     applyThemeSettings(theme, defaultTheme); // Apply theme from payload
 
-    // 3) Set title 
+    // 3) Set title and subtitle
     titleEl.textContent = payload.name || 'Shared List';
     document.title = `List Assist – Shared: ${payload.name || 'List'}`; // Update page title too
+    
+    // Handle subtitle and image
+    const subtitleBox = document.getElementById('subtitleBox');
+    const subtitleContent = document.getElementById('subtitleContent');
+    const subtitleImage = document.getElementById('subtitleImage');
+    
+    if (payload.subtitle?.text || payload.subtitle?.imageUrl) {
+        subtitleBox.style.display = 'block';
+        subtitleContent.textContent = payload.subtitle.text || '';
+        subtitleBox.className = `content-box subtitle-box ${payload.subtitle.alignment || 'left'}`;
+        
+        if (payload.subtitle.imageUrl) {
+            subtitleImage.src = payload.subtitle.imageUrl;
+            subtitleImage.style.display = 'block';
+            subtitleImage.style.marginLeft = payload.subtitle.imageAlignment === 'left' ? '0' : 'auto';
+            subtitleImage.style.marginRight = payload.subtitle.imageAlignment === 'right' ? '0' : 'auto';
+        } else {
+            subtitleImage.style.display = 'none';
+        }
+    } else {
+        subtitleBox.style.display = 'none';
+    }
 
     // 4) Render items into the table
     listBodyEl.innerHTML = ''; // Clear any potential placeholder
